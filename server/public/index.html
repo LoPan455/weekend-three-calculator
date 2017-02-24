@@ -2,12 +2,28 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Title Goes Here</title>
+  <title>Weekend 3 - Calculator</title>
   <link rel="stylesheet" href="style.css" />
   <script src="jquery.js" charset="utf-8"></script>
   <script src="client.js" charset="utf-8"></script>
 </head>
 <body>
-  <h1>Title Goes Here</h1>
+  <h1>Calculator</h1>
+  <form id="submitFields">
+    <label for="value1">Value 1</label>
+    <input type="text" name="value1" id="value1" value="">
+    <label for="value2">Value2</label>
+    <input type="text" name="value1" id="value2" value="">
+    <button type="button" name="submit" id="additionButton">Addition</button>
+    <button type="button" name="submit" id="subtractionButton">Subtraction</button>
+    <button type="button" name="submit" id="multiplicationButton">Multiplication</button>
+    <button type="button" name="submit" id="divisionButton">Division</button>
+  </form>
+  <div id="output">
+    <p>
+      Your result is <span id="result"></span>
+    </p>
+  </div>
+
 </body>
 </html>
