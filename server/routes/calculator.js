@@ -1,5 +1,6 @@
-var express = ('express')
+var express = require("express");
 var router = express.Router();
+var calulatorOutput; //holds the result of the calulation
 
 router.post('/division',function(req,res){
   res.sendStatus(200);
@@ -7,8 +8,13 @@ router.post('/division',function(req,res){
 })
 
 router.post('/addition',function(req,res){
-  res.sendStatus(200)
-  console.log('addition happened');
+  
+  var response = req.body;
+  console.log('the POST request consisted of: ',response,' let me do some work on that');
+  calculatedOutput = parseInt(response.x) + parseInt(response.y);
+  console.log(calculatedOutput);
+  res.send(calculatedOutput+'');
+
 });
 
 router.post('/subtraction',function(req,res){
