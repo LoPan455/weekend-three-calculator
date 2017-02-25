@@ -115,4 +115,15 @@ $(document).ready(function(){
       })//end ajax
   }); //end listener
 
+  // listener for reset button
+  $('#clearButton').on('click',function(){
+    value1 = 0;
+    value2 = 0;
+    $('#value1').val('');
+    $('#value2').val('');
+    $('#result').text('');
+});
+
+
+
 }); //end document.ready

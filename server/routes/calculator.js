@@ -32,7 +32,6 @@ router.post('/subtraction',function(req,res){
 router.post('/multiplication',function(req,res){
   console.log('req.body = ',req.body);
   var response = req.body;
-
   console.log('the POST request consisted of: ',response,' let me do some work on that');
   calculatedOutput = parseInt(response.x) * parseInt(response.y);
   console.log(calculatedOutput);
