@@ -1,6 +1,6 @@
 console.log('JS has been sourced properly');
-var value1 = 0;
-var value2 = 0;
+var value1 = 0; //stores the first value the user enters
+var value2 = 0; //
 var numbersAndOperator = {};
 var type = '';
 var enteredValue = '';
@@ -19,43 +19,25 @@ $(document).ready(function(){
 
   //operation button listeners
   $('#additionButton').on('click',function(){
-    //sets the value variables as the value of the input fields
-    value1 = $('#enteredValue').text(); //sets value1 to whatever is in the 'You entered' span
-    type = $(this).data('operand'); //sets the operation type
-    numbersAndOperator.x = value1  //writes value1 as 'x' in the object that will be sent to the server
-    numbersAndOperator.type = type;
+    storeFirstDigit();
     routeUrl = "calculator/addition" //sets the destination route for the object
-    enteredValue = ''; //clears out the enteredValue variable
   }); //end addition button click listener
 
   $('#subtractionButton').on('click',function(){
-    //sets the value variables as the value of the input fields
-    value1 = $('#enteredValue').text(); //sets value1 to whatever is in the 'You entered' span
-    type = $(this).data('operand'); //sets the operation type
-    numbersAndOperator.x = value1  //writes value1 as 'x' in the object that will be sent to the server
-    numbersAndOperator.type = type;
+    storeFirstDigit();
     routeUrl = "calculator/subtraction" //sets the destination route for the object
-    enteredValue = ''; //clears
   });//end subtraction button click listener
 
   $('#multiplicationButton').on('click',function(){
-    //sets the value variables as the value of the input fields
-    value1 = $('#enteredValue').text(); //sets value1 to whatever is in the 'You entered' span
-    type = $(this).data('operand'); //sets the operation type
-    numbersAndOperator.x = value1  //writes value1 as 'x' in the object that will be sent to the server
-    numbersAndOperator.type = type;
+    storeFirstDigit();
     routeUrl = "calculator/multiplication" //sets the destination route for the object
-    enteredValue = ''; //clears
+
   });// end multiplication button click listener
 
   $('#divisionButton').on('click',function(){
-    //sets the value variables as the value of the input fields
-    value1 = $('#enteredValue').text(); //sets value1 to whatever is in the 'You entered' span
-    type = $(this).data('operand'); //sets the operation type
-    numbersAndOperator.x = value1  //writes value1 as 'x' in the object that will be sent to the server
-    numbersAndOperator.type = type;
+    storeFirstDigit();
     routeUrl = "calculator/division" //sets the destination route for the object
-    enteredValue = ''; //clears
+
   }); // end division button listener
 
   $('#equalsButton').on('click',function(){
@@ -66,7 +48,7 @@ $(document).ready(function(){
     // ajax POST request to send the object to the server for processing
     $.ajax({
       type: "POST",
-      url: routeUrl,  //the route is set depending which operand the user chose previously
+      url: routeUrl,  //the route is set depending which operator the user chose previously
       data: numbersAndOperator, // defining the object as the data payload
       success: function(response){
         console.log('logging the server response: ',response);
@@ -82,11 +64,19 @@ $(document).ready(function(){
   $('#clearButton').on('click',function(){
     value1 = 0;
     value2 = 0;
-    $('#value1').val('');
-    $('#value2').val('');
+    enteredValue=''
+    $('#enteredValue').text('');
     $('#result').text('');
 });
 
 
 
 }); //end document.ready
+
+function storeFirstDigit(){
+  value1 = $('#enteredValue').text(); //sets value1 to whatever is in the 'You entered' span
+  type = $(this).data('operator'); //sets the operation type
+  numbersAndOperator.x = value1  //writes value1 as 'x' in the object that will be sent to the server
+  numbersAndOperator.type = type;
+  enteredValue = ''; //clears out the enteredValue variable
+}
