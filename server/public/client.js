@@ -11,8 +11,7 @@ $(document).ready(function(){
   $('#additionButton').on('click',function(){
 
     //sets the value variables as the value of the input fields
-    value1 = $('#value1').val();
-    value2 = $('#value2').val();
+    value1 = $('#enteredValue').val();
     type = $(this).data('operand');
     //adds these values to the empty object
     numbersAndOperator.x = value1
