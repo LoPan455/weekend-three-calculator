@@ -3,35 +3,53 @@
 <head>
   <meta charset="utf-8" />
   <title>Weekend 3 - Calculator</title>
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/css/style.css">
   <script src="/js/jquery.js" charset="utf-8"></script>
+  <script src=/js/bootstrap.min.js></script>
   <script src="/js/client.js" charset="utf-8"></script>
 </head>
-<body>
+<body class="text-center">
   <h1>Calculator</h1>
-  <form id="submitFields">
-    <div id="inputButtons">
-    <button type="button" class="digitButton" name="1" id="1">1</button>
-    <button type="button" class="digitButton" name="2" id="2">2</button>
-    <button type="button" class="digitButton" name="3" id="3">3</button>
-    <button type="button" class="digitButton" name="4" id="4">4</button>
-    <button type="button" class="digitButton" name="5" id="5">5</button>
-    <button type="button" class="digitButton" name="6" id="6">6</button>
-    <button type="button" class="digitButton" name="7" id="7">7</button>
-    <button type="button" class="digitButton" name="8" id="8">8</button>
-    <button type="button" class="digitButton" name="9" id="9">9</button>
-    <button type="button" class="digitButton" name="0" id="0">0</button>
+  <div id="digitButtons">
+
+    <div class="row">
+      <button type="button" class="digitButton" name="1" id="1">1</button>
+      <button type="button" class="digitButton" name="2" id="2">2</button>
+      <button type="button" class="digitButton" name="3" id="3">3</button>
     </div>
+
+    <div class="row">
+      <button type="button" class="digitButton" name="4" id="4">4</button>
+      <button type="button" class="digitButton" name="5" id="5">5</button>
+      <button type="button" class="digitButton" name="6" id="6">6</button>
+    </div>
+
+    <div class="row">
+      <button type="button" class="digitButton" name="7" id="7">7</button>
+      <button type="button" class="digitButton" name="8" id="8">8</button>
+      <button type="button" class="digitButton" name="9" id="9">9</button>
+    </div>
+
+    <div class="row">
+      <button type="button" class="digitButton" name="0" id="0">0</button>
+    </div>
+    <div class="row" id="operatorButtons">
+      <button type="button" name="submit" id="additionButton" data-operator="add">+</button>
+      <button type="button" name="submit" id="subtractionButton" data-operator="subtract">-</button>
+      <button type="button" name="submit" id="multiplicationButton" data-operator="multiply">*</button>
+      <button type="button" name="submit" id="divisionButton" data-operator="divide">/</button>
+      <button type="button" name="submit" id="equalsButton">=</button>
+      <button type="button" name="clear" id="clearButton">Clear</button>
+    </div>
+
+  </div>
     <div id="calculatorDisplay">
       <h2>You entered: <span id="enteredValue"></span></h2>
     </div>
-    <button type="button" name="submit" id="additionButton" data-operator="add">+</button>
-    <button type="button" name="submit" id="subtractionButton" data-operator="subtract">-</button>
-    <button type="button" name="submit" id="multiplicationButton" data-operator="multiply">*</button>
-    <button type="button" name="submit" id="divisionButton" data-operator="divide">/</button>
-    <button type="button" name="submit" id="equalsButton">=</button>
-    <button type="button" name="clear" id="clearButton">Clear</button>
 
+  </div>
   <div id="output">
     <h2>
       Your result is: <span id="result"></span>
