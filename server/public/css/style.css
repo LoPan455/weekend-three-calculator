@@ -1,11 +1,19 @@
-h1 {
-  color: blue;
+@font-face {
+  font-family: dotty;
+  src: url(/fonts/dotty.ttf);
 }
-
-/*#digitButtons {
-  margin-left: 100px;
-}*/
 
 #operatorButtons{
   margin-top: 20px;
+}
+
+#digitButtons {
+  display: block;
+  margin: auto;
+  width: 50%;
+
+}
+
+.jumbotron h1 {
+  text-align: center;
 }

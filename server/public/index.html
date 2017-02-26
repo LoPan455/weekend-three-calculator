@@ -10,51 +10,56 @@
   <script src=/js/bootstrap.min.js></script>
   <script src="/js/client.js" charset="utf-8"></script>
 </head>
-<body class="text-center">
-  <h1>Calculator</h1>
-  <div id="digitButtons">
-
-    <div class="row">
-      <button type="button" class="digitButton" name="1" id="1">1</button>
-      <button type="button" class="digitButton" name="2" id="2">2</button>
-      <button type="button" class="digitButton" name="3" id="3">3</button>
-    </div>
-
-    <div class="row">
-      <button type="button" class="digitButton" name="4" id="4">4</button>
-      <button type="button" class="digitButton" name="5" id="5">5</button>
-      <button type="button" class="digitButton" name="6" id="6">6</button>
-    </div>
-
-    <div class="row">
-      <button type="button" class="digitButton" name="7" id="7">7</button>
-      <button type="button" class="digitButton" name="8" id="8">8</button>
-      <button type="button" class="digitButton" name="9" id="9">9</button>
-    </div>
-
-    <div class="row">
-      <button type="button" class="digitButton" name="0" id="0">0</button>
-    </div>
-    <div class="row" id="operatorButtons">
-      <button type="button" name="submit" id="additionButton" data-operator="add">+</button>
-      <button type="button" name="submit" id="subtractionButton" data-operator="subtract">-</button>
-      <button type="button" name="submit" id="multiplicationButton" data-operator="multiply">*</button>
-      <button type="button" name="submit" id="divisionButton" data-operator="divide">/</button>
-      <button type="button" name="submit" id="equalsButton">=</button>
-      <button type="button" name="clear" id="clearButton">Clear</button>
-    </div>
-
+<body>
+  <div class="jumbotron">
+  <h1>Fancy Schmancy Calculator</h1>
   </div>
+
+  <div id="digitButtons" class="container">
+    <div class="row">
+      <button type="button" class="digitButton col-md-4 col-centered" name="1" id="1">1</button>
+      <button type="button" class="digitButton col-md-4 col-centered" name="2" id="2">2</button>
+      <button type="button" class="digitButton col-md-4 col-centered" name="3" id="3">3</button>
+    </div>
+    <div class="row">
+      <button type="button" class="digitButton col-md-4 col-centered" name="1" id="1">1</button>
+      <button type="button" class="digitButton col-md-4 col-centered" name="2" id="2">2</button>
+      <button type="button" class="digitButton col-md-4 col-centered" name="3" id="3">3</button>
+    </div>
+    <div class="row">
+      <button type="button" class="digitButton col-md-4 col-centered" name="4" id="4">4</button>
+      <button type="button" class="digitButton col-md-4 col-centered" name="5" id="5">5</button>
+      <button type="button" class="digitButton col-md-4 col-centered" name="6" id="6">6</button>
+    </div>
+    <div class="row">
+      <button type="button" class="digitButton col-md-4 col-centered" name="7" id="7">7</button>
+      <button type="button" class="digitButton col-md-4 col-centered" name="8" id="8">8</button>
+      <button type="button" class="digitButton col-md-4 col-centered" name="9" id="9">9</button>
+    </div>
+    <div class="row">
+      <button type="button" class="digitButton col-md-4 col-centered" name="0" id="0">0</button>
+      <button type="button" class="digitButton col-md-4 col-centered" name="decimal" id="decimal">.</button>
+      <button type="button" class="digitButton col-md-4 col-centered"> ..</button>
+    </div>
+  </div>
+    <div id="operatorButtons" class="container btn-group-lg">
+
+        <button type="button" class="btn btn-primary" name="submit" id="additionButton" data-operator="add">+</button>
+        <button type="button" class="btn btn-primary" name="submit" id="subtractionButton" data-operator="subtract">-</button>
+        <button type="button" class="btn btn-primary" name="submit" id="multiplicationButton" data-operator="multiply">*</button>
+        <button type="button" class="btn btn-primary" name="submit" id="divisionButton" data-operator="divide">/</button>
+        <button type="button" class="btn btn-primary" name="submit" id="equalsButton">=</button>
+        <button type="button" class="btn btn-primary" name="clear" id="clearButton">Clear</button>
+
+    </div>
+
     <div id="calculatorDisplay">
       <h2>You entered: <span id="enteredValue"></span></h2>
     </div>
 
-  </div>
-  <div id="output">
-    <h2>
-      Your result is: <span id="result"></span>
-    </h2>
-  </div>
+    <div id="output">
+      <h2>Your result is: <span id="result"></span></h2>
+    </div>
 
 </body>
 </html>
