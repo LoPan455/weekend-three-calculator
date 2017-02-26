@@ -5,14 +5,13 @@
 
 #operatorButtons{
   margin-top: 20px;
+  /*float: left;*/
 }
 
-#digitButtons {
-  display: block;
-  margin: auto;
-  width: 50%;
-
+#digitButton {
+  background-color: orange;
 }
+
 
 .jumbotron h1 {
   text-align: center;

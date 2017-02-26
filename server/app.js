@@ -13,7 +13,7 @@ app.use(express.static('public')); // this methods says, 'is this request for a 
 app.use(bodyParser.urlencoded({extended: true})); //if we want to parse the body of a response!
 
 
-app.use('/calculator',calculator)
+app.use('/calculator',calculator) //directs traffic into the calculator.js route
 
 
 console.log('listening on server port 3000');
