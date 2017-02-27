@@ -12,13 +12,13 @@ app.get("/*", function(req,res){
     res.sendFile(path.join(__dirname, "/public/", file));
 });
 
-app.use(express.static('public/')); // this methods says, 'is this request for a static file?  If so, I will look in '/server/public'
+// app.use(express.static('public/')); // this methods says, 'is this request for a static file?  If so, I will look in '/server/public'
 
 
 app.use(bodyParser.urlencoded({extended: true})); //if we want to parse the body of a response!
 
 
-app.use('/calculator',calculator) //directs traffic into the calculator.js route
+app.use('/calculator',calculator); //directs traffic into the calculator.js route
 
 
 console.log('listening on server port 3000');

@@ -20,22 +20,22 @@ $(document).ready(function(){
   //operation button listeners
   $('#additionButton').on('click',function(){
     storeFirstDigit(); //upon click of an operator button, the string of digits the user clikced is stored as 'value1'
-    routeUrl = "calculator/addition" //sets the destination route for the object
+    routeUrl = "/calculator/addition" //sets the destination route for the object
   });
 
   $('#subtractionButton').on('click',function(){
     storeFirstDigit(); //upon click of an operator button, the string of digits the user clikced is stored as 'value1'
-    routeUrl = "calculator/subtraction" //sets the destination route for the object
+    routeUrl = "/calculator/subtraction" //sets the destination route for the object
   });
 
   $('#multiplicationButton').on('click',function(){
     storeFirstDigit(); //upon click of an operator button, the string of digits the user clikced is stored as 'value1'
-    routeUrl = "calculator/multiplication" //sets the destination route for the object
+    routeUrl = "/calculator/multiplication" //sets the destination route for the object
   });
 
   $('#divisionButton').on('click',function(){
     storeFirstDigit();//upon click of an operator button, the string of digits the user clikced is stored as 'value1'
-    routeUrl = "calculator/division" //sets the destination route for the object
+    routeUrl = "/calculator/division" //sets the destination route for the object
   });
 
   // event handler for clicking '='
